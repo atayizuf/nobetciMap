@@ -42,8 +42,7 @@ fetch("https://openapi.izmir.bel.tr/api/ibb/nobetcieczaneler")
       })
         .addTo(map)
         .bindPopup(
-          `<div class="ana"><h2>${Adi[i]}</h2><br /><a class="telefon" href="tel:${Telefon[i]}">${Telefon[i]}</a><div class="gitbuton">Navigasyon Kullan</div></div>`
-        )
-        .openPopup();
+          `<div class="ana"><h2>${Adi[i]}</h2><br /><a class="telefon" href="tel:${Telefon[i]}">${Telefon[i]}</a><br><div>${BolgeAciklama[i]}</div><div class="gitbuton">Navigasyon Kullan</div></div>`
+        );
     }
   });
