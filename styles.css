@@ -5,3 +5,43 @@ body{
     width: 100%;
     height: 100vh;
 }
+#basoneri{
+    text-align: center;
+    position: absolute;
+    z-index: 800;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#h1bas{
+    color: #ffffff;
+background-color: rgb(82, 82, 82);
+border-radius: 3px;
+padding: 0 10px;
+}
+.telefon:link{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.ana{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gitbuton{ 
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    margin: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.gitbuton:hover{
+    background-color: #132b14;
+}
