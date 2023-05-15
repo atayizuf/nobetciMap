@@ -46,3 +46,9 @@ fetch("https://openapi.izmir.bel.tr/api/ibb/nobetcieczaneler")
         );
     }
   });
+
+const kapatbas = document.getElementById("kapat");
+const basonerikapat = document.getElementById("basoneri");
+kapatbas.addEventListener("click", () => {
+  basonerikapat.style.display = "none";
+});
