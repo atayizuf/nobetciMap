@@ -26,7 +26,7 @@ fetch(nobEczaneLink)
       )
         .addTo(map)
         .bindPopup(
-          `<div class="ana"><h4 id="popid">${resp[i].Bolge}</h4><h2>${resp[i].Adi}</h2><br /><a class="telefon" href="tel:${resp[i].Telefon}">${resp[i].Telefon}</a><br><div id="aciklama">${resp[i].BolgeAciklama}</div><a class="gitbuton" href="https://www.google.com/maps/place/${resp[i].LokasyonX},${resp[i].LokasyonY}/@${resp[i].LokasyonX},${resp[i].LokasyonY},17.25z" target="_blank">Navigasyon Kullan</a></div>`
+          `<div class="ana"><h4 id="popid">${resp[i].Bolge}</h4><h2>${resp[i].Adi}</h2><br /><a class="telefon" href="tel:${resp[i].Telefon}">${resp[i].Telefon}</a><br><div id="aciklama">${resp[i].BolgeAciklama}</div><a class="gitbuton" href="https://www.google.com/maps?saddr=My+Location&daddr=${resp[i].LokasyonX},${resp[i].LokasyonY}" target="_blank">Navigasyon Kullan</a></div>`
         );
     }
   });
