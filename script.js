@@ -2,7 +2,6 @@ var map = L.map("map", {
   center: [38.451440213829905, 27.141684430822952], //38.451440213829905, 27.141684430822952
   zoom: 11,
 });
-const nobEczaneLink = "https://openapi.izmir.bel.tr/api/ibb/nobetcieczaneler";
 L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
   maxZoom: 20,
   subdomains: ["mt0", "mt1", "mt2", "mt3"],
@@ -14,7 +13,7 @@ const myIcon = L.icon({
   iconSize: [50, 70],
   popupAnchor: [2, -35],
 });
-fetch(nobEczaneLink)
+fetch("https://openapi.izmir.bel.tr/api/ibb/nobetcieczaneler")
   .then((resp) => resp.json())
   .then((resp) => {
     for (let i = 0; i < resp.length; i++) {
@@ -26,7 +25,7 @@ fetch(nobEczaneLink)
       )
         .addTo(map)
         .bindPopup(
-          `<div class="ana"><h4 id="popid">${resp[i].Bolge}</h4><h2>${resp[i].Adi}</h2><br /><a class="telefon" href="tel:${resp[i].Telefon}">${resp[i].Telefon}</a><br><div id="aciklama">${resp[i].BolgeAciklama}</div><a class="gitbuton" href="https://www.google.com/maps?saddr=My+Location&daddr=${resp[i].LokasyonX},${resp[i].LokasyonY}" target="_blank">Navigasyon Kullan</a></div>`
+          `<div class="ana"><h4 id="popid">${resp[i].Bolge}</h4><h2>${resp[i].Adi}</h2><br /><a class="telefon" href="tel:${resp[i].Telefon}">${resp[i].Telefon}</a><br><div id="aciklama">${resp[i].BolgeAciklama}</div><a class="gitbuton" href="http://maps.google.com/maps?saddr=My+Location&daddr=${resp[i].LokasyonX},${resp[i].LokasyonY}" target="_blank">Navigasyon Kullan</a></div>`
         );
     }
   });
